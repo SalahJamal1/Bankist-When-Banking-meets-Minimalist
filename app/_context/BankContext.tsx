@@ -2,13 +2,16 @@
 import {
   createContext,
   ReactNode,
+  RefObject,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from 'react';
 
 interface ICONTEXT {
   visible: boolean;
+
   handelVisible: () => void;
   openMenu: boolean;
   handelMenu: () => void;
@@ -22,6 +25,7 @@ type Props = {
 
 export default function BankContext({ children }: Props) {
   const [visible, setVisible] = useState<boolean>(false);
+
   const [openMenu, setOpen] = useState<boolean>(false);
   const handelMenu = () => {
     setOpen(!openMenu);
@@ -42,7 +46,7 @@ export default function BankContext({ children }: Props) {
   }, []);
 
   useEffect(() => {
-    const sections = document.querySelectorAll<HTMLImageElement>('section');
+    const sections = document.querySelectorAll('section');
     if (!sections) return;
     const observer = (
       [e]: IntersectionObserverEntry[],
@@ -50,7 +54,6 @@ export default function BankContext({ children }: Props) {
     ) => {
       if (!e.isIntersecting) return;
       e.target.classList.remove('section--hidden');
-
       observe.unobserve(e.target);
     };
 
@@ -58,12 +61,14 @@ export default function BankContext({ children }: Props) {
       root: null,
       threshold: 0.15,
     });
+
     sections.forEach(section => {
       const offest = section.getBoundingClientRect();
       if (offest.bottom > 0 && offest.top < window.innerHeight) return;
-      handelObserver.observe(section);
       section.classList.add('section--hidden');
+      handelObserver.observe(section);
     });
+
     return () => handelObserver.disconnect();
   }, []);
 

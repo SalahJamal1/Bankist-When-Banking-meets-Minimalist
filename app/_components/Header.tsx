@@ -92,25 +92,25 @@ export default function Header() {
       </nav>
 
       <div className="lg:flex-1 xl:max-w-6xl lg:max-w-5xl mx-auto lg:grid lg:grid-cols-[3fr,1fr] xl:gap-15 lg:gap-10 lg:items-start lg:content-center lg:justify-center lg:justify-items-start xs:grid-cols-1 xs:space-y-3 xs:pt-10">
-        <h1 className="block xl:text-6xl sm:text-4xl xs:text-xl lg:text-4xl font-extrabold xl:leading-[72px] lg:leading-[50px] text-[#444444] capitalize lg:text-start xs:text-center">
+        <h1 className="block xl:text-6xl sm:text-4xl xs:text-xl lg:text-4xl font-extrabold xl:leading-[72px] lg:leading-[50px] text-[#444444] capitalize lg:text-start xs:text-center animate-pulse">
           When
           <span className="mx-4 relative highlight">banking</span>
           meets
           <br />
           <span className="highlight relative">minimalist</span>
         </h1>
-        <h4 className="xl:text-2xl lg:text-base leading-11 font-semibold xs:text-center">
+        <h4 className="xl:text-2xl lg:text-base leading-11 font-semibold xs:text-center animate-left">
           A simpler banking experience for a simpler life.
         </h4>
         <a
           href="#section--1"
-          className="block text-base text-primary font-light border-primary border-b-2 pb-1 lg:text-start lg:justify-self-start xs:text-center xs:justify-self-center"
+          className="block text-base text-primary font-light border-primary border-b-2 pb-1 lg:text-start lg:justify-self-start xs:text-center xs:justify-self-center animate-bottom"
         >
           Learn more
         </a>
         <Image
           src={hero}
-          className="lg:w-full xs:w-2/3 lg:col-2 lg:row-[1/span_4]  xs:justify-self-center xs:mt-5 lg:-translate-y-32 xl:-translate-y-10"
+          className="lg:w-full xs:w-2/3 lg:col-2 lg:row-[1/span_4]  xs:justify-self-center xs:mt-5 lg:-translate-y-32 xl:-translate-y-10 animate-blur"
           alt="Minimalist bank items"
         />
       </div>

@@ -46,10 +46,10 @@ export default function Reviewers() {
       id="section--3"
     >
       <div className="lg:max-w-3xl lg:mx-auto lg:text-start xs:text-center">
-        <h2 className="text-base leading-8 text-primary font-semibold mb-3 block">
+        <h2 className="text-base leading-8 text-primary font-semibold mb-3 block animate-left">
           Not sure yet?
         </h2>
-        <h3 className="md:mb-20 block lg:text-[40px] md:text-2xl lg:text-start xs:text-center xs:leading-7 md:leading-[52px] font-medium sm:text-base xs:text-xs xs:mx-1">
+        <h3 className="md:mb-20 block lg:text-[40px] md:text-2xl lg:text-start xs:text-center xs:leading-7 md:leading-[52px] font-medium sm:text-base xs:text-xs xs:mx-1 animate-bottom">
           Millions of Bankists are already making their lifes simpler.
         </h3>
       </div>
@@ -81,7 +81,7 @@ export default function Reviewers() {
                   width={65}
                   src={testimonial.img}
                   alt={testimonial.name}
-                  className="rounded-full md:h-16 md:w-16 row-span-2 xs:h-12 xs:w-12"
+                  className="rounded-full md:h-16 md:w-16 row-span-2 xs:h-12 xs:w-12 animate-blur"
                 />
                 <h6 className="sm:text-base xs:text-xs md:leading-8 sm:leading-3 font-medium">
                   {testimonial.name}

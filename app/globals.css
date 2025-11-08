@@ -13,11 +13,69 @@
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+
+  --animate-wiggle: wiggle 3s ease-in-out;
+  --animate-blur: blur 3s ease-in-out;
+  --animate-left: left 3s ease-in-out;
+  --animate-bottom: bottom 3s ease-in-out;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  @keyframes blur {
+    0%,
+    100% {
+      filter: blur(10px);
+    }
+    50% {
+      filter: blur(20px);
+    }
+  }
+  @keyframes left {
+    0% {
+      opacity: 0;
+      background-color: transparent;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 0.3;
+      background-color: transparent;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bottom {
+    0% {
+      opacity: 0;
+      background-color: transparent;
+
+      transform: translateY(100%);
+    }
+    50% {
+      opacity: 0.3;
+      background-color: transparent;
+      transform: translateY(-30%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 }
 
 .highlight::after {
   content: ' ';
   width: 100%;
+
   height: 100%;
   left: 0;
   bottom: 0;

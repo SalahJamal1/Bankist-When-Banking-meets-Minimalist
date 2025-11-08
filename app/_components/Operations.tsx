@@ -11,10 +11,10 @@ export default function Operations() {
       id="section--2"
     >
       <div className="lg:max-w-3xl lg:mx-auto xs:text-center lg:text-start">
-        <h2 className="text-base leading-8 text-primary font-semibold mb-3 block">
+        <h2 className="text-base leading-8 text-primary font-semibold mb-3 block animate-left">
           Operations
         </h2>
-        <h3 className="mb-20 block lg:text-[40px] md:text-2xl sm:text-base xs:text-xs md:leading-[52px] xs:leading-8 font-medium xs:mx-1">
+        <h3 className="mb-20 block lg:text-[40px] md:text-2xl sm:text-base xs:text-xs md:leading-[52px] xs:leading-8 font-medium xs:mx-1 animate-bottom">
           Everything as simple as possible, but no simpler.
         </h3>
       </div>
@@ -26,9 +26,9 @@ export default function Operations() {
               key={i}
               className={`flex sm:gap-2 sm:leading-8 ${
                 d.color
-              }  md:px-6 md:py-3 xs:px-1 sm:px-2 sm:py-3 xs:py-1 xs:gap-1 xs:justify-center xs:items-center rounded-full sm:text-base xs:text-[7px] sm:font-medium text-black cursor-pointer duration-500 transition-all font-[inherit]  ${
+              }  md:px-6 md:py-3 xs:px-1 sm:px-2 sm:py-3 xs:py-1 xs:gap-1 xs:justify-center xs:items-center rounded-full sm:text-base xs:text-[7px] sm:font-medium text-black cursor-pointer font-[inherit]  ${
                 i === index && '-translate-y-[20%]'
-              } duration-150 transition-all hover:${d.hover}`}
+              }  transition-all animate-[pulse_2s_ease-in-out]`}
               data-tab={i + 1}
               onClick={() => setIndex(i)}
             >
@@ -49,12 +49,12 @@ export default function Operations() {
             <div
               className={`sm:h-[70px] sm:w-[70px] xs:w-[30px] xs:h-[30px] ${
                 data.at(i)?.opacity
-              } rounded-full`}
+              } rounded-full animate-[ping_3s_ease-in-out]`}
             ></div>
-            <h5 className="sm:text-xl xs:text-[11px]  font-semibold">
+            <h5 className="sm:text-xl xs:text-[11px]  font-semibold animate-[pulse_3s_ease-in-out]">
               {d.title}
             </h5>
-            <p className="col-2 sm:text-base xs:text-[9px] xs:leading-4 sm:leading-8 font-light">
+            <p className="col-2 sm:text-base xs:text-[9px] xs:leading-4 sm:leading-8 font-light animate-bottom">
               {d.description}
             </p>
           </div>
