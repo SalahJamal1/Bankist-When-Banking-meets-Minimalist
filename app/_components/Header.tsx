@@ -91,7 +91,7 @@ export default function Header() {
         )}
       </nav>
 
-      <div className="lg:flex-1 xl:max-w-6xl lg:max-w-5xl mx-auto lg:grid lg:grid-cols-[3fr,1fr] xl:gap-15 lg:gap-10 lg:items-start lg:content-center lg:justify-center lg:justify-items-start xs:grid-cols-1 xs:space-y-3 xs:pt-10">
+      <div className="lg:flex-1 xl:max-w-6xl lg:max-w-5xl mx-auto lg:grid lg:grid-cols-[3fr,1fr] xl:gap-15 lg:gap-10 lg:items-start lg:content-center lg:justify-center lg:justify-items-start xs:flex xs:flex-col xs:space-y-3 xs:pt-10  xs:items-center">
         <h1 className="block xl:text-6xl sm:text-4xl xs:text-xl lg:text-4xl font-extrabold xl:leading-[72px] lg:leading-[50px] text-[#444444] capitalize lg:text-start xs:text-center animate-pulse">
           When
           <span className="mx-4 relative highlight">banking</span>
@@ -104,7 +104,7 @@ export default function Header() {
         </h4>
         <a
           href="#section--1"
-          className="block text-base text-primary font-light border-primary border-b-2 pb-1 lg:text-start lg:justify-self-start xs:text-center xs:justify-self-center animate-bottom"
+          className="block text-base text-primary font-light border-primary border-b-2 pb-1  animate-bottom w-fit"
         >
           Learn more
         </a>
