@@ -1,26 +1,60 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --breakpoint-xs: 15rem;
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.highlight::after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0.7;
+  z-index: -1;
+  position: absolute;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-primary);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+section {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.section--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8rem);
+}
+
+@media (max-width: 1024) {
+  nav ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    border-top-right-radius: 15px;
+    left: 0;
+    padding-top: 8rem;
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transform: translateX(-100%);
   }
 }
+.nav_mobile {
+  opacity: 1;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transform: translateX(0);
 }
